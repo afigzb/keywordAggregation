@@ -1,0 +1,30 @@
+# Dependency directories
+node_modules/
+venv/
+.venv/
+env/
+.env/
+
+# Build outputs
+dist/
+dist_electron/
+build/
+bin/
+obj/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE files
+.vscode/
+.idea/
+.cursor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
