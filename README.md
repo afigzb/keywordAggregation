@@ -1,6 +1,6 @@
 # Keyword Aggregation Tool (关键词聚合工具)
 
-这是一个基于 React + Vite + Tailwind CSS (v4) + Electron 前端和 FastAPI 后端的桌面应用程序。
+这是一个基于 React + Vite + Tailwind CSS (v4)+ ts + Electron 前端和 FastAPI 后端的桌面应用程序。
 
 ## 1. 环境准备
 

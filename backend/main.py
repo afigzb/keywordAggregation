@@ -22,4 +22,4 @@ def get_data():
     return {"data": [1, 2, 3, 4, 5], "status": "success"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=6759)
