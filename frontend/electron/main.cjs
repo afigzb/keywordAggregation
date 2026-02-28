@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('path');
 const { spawn, exec } = require('child_process');
 
@@ -90,6 +90,16 @@ function createWindow() {
     mainWindow = null;
   });
 }
+
+ipcMain.handle('open-file-dialog', async () => {
+  const { canceled, filePaths } = await dialog.showOpenDialog(mainWindow, {
+    title: '选择文本文件',
+    filters: [{ name: '文本文件', extensions: ['txt'] }],
+    properties: ['openFile'],
+  });
+  if (canceled || filePaths.length === 0) return null;
+  return filePaths[0];
+});
 
 app.on('ready', createWindow);
 
